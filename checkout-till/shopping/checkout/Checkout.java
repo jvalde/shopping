@@ -62,13 +62,17 @@ public class Checkout implements BarcodeScanListener {
 		for (Product product : scannedProducts.keySet()) {
 			int count = unitsScanned(product);
 			BigDecimal lineTotal = product.priceOf(count);
-			
+
 			total = total.add(lineTotal);
 			
 			printer.printReceiptLine(product, count, lineTotal);
+            if(product.isOnDeal()){
+                printer.printDiscount(product, "TPOT", product.unitPrice());
+            }
+
 		}
-		
-		printer.printTotalLine(total);
+
+        printer.printTotalLine(total);
 		printer.endOfReceipt();
 	}
 }

@@ -9,12 +9,14 @@ public class Product {
 	private final String name;
 	private final String barcode;
 	private final BigDecimal unitPrice;
-	
-	public Product(String name, String barcode, BigDecimal unitPrice) {
+    private final boolean isOnDeal;
+
+    public Product(String name, String barcode, BigDecimal unitPrice, boolean isOnDeal) {
 		this.name = name;
 		this.barcode = barcode;
 		this.unitPrice = unitPrice;
-	}
+        this.isOnDeal = isOnDeal;
+    }
 
 	/**
 	 * Returns the name of the product.
@@ -50,4 +52,8 @@ public class Product {
 	public BigDecimal unitPrice() {
 		return unitPrice;
 	}
+
+    public boolean isOnDeal() {
+        return isOnDeal;
+    }
 }

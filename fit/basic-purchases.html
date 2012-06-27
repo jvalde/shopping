@@ -11,7 +11,7 @@
   <body><h1>Till Receipt for Basic Purchases</h1><table border="0"
       cellpadding="">
       <tr>
-        <td colspan="3">Given the following products</td>
+        <td colspan="4">Given the following products</td>
       </tr>
 
       <tr>
@@ -20,6 +20,9 @@
         <td>Barcode</td>
 
         <td>Unit Price</td>
+
+        <td>is On Deal</td>
+
       </tr>
 
       <tr>
@@ -28,6 +31,9 @@
         <td>11111111</td>
 
         <td>0.50</td>
+
+        <td>true</td>
+
       </tr>
 
       <tr>
@@ -36,6 +42,8 @@
         <td>22222222</td>
 
         <td>1.00</td>
+
+        <td>false</td>
       </tr>
 
       <tr>
@@ -44,6 +52,8 @@
         <td>33333333</td>
 
         <td>0.75</td>
+
+        <td>false</td>
       </tr>
     </table><table border="0">
       <tr>
@@ -74,6 +84,11 @@
       <tr>
         <td>Bread</td>
       </tr>
+
+      <tr>
+          <td>Milk</td>
+      </tr>
+
     </table>
     
     <p>The receipt lists the product in the order that they were
@@ -92,21 +107,26 @@
 
       <tr class="receiptLine">
         <td>1</td>
-        <td>2 Milk @ 0.50 each = 1.00</td>
+        <td>3 Milk @ 0.50 each = 1.50</td>
       </tr>
 
       <tr class="receiptLine">
-        <td>2</td>
-        <td>1 Cheese @ 1.00 each = 1.00</td>
+          <td>2</td>
+          <td>1 Milk discount @ 0.50 each = 0.50</td>
       </tr>
 
       <tr class="receiptLine">
         <td>3</td>
-        <td>1 Bread @ 0.75 each = 0.75</td>
+        <td>1 Cheese @ 1.00 each = 1.00</td>
       </tr>
 
       <tr class="receiptLine">
         <td>4</td>
+        <td>1 Bread @ 0.75 each = 0.75</td>
+      </tr>
+
+      <tr class="receiptLine">
+        <td>5</td>
         <td>Total = 2.75</td>
       </tr>
     </table></body>

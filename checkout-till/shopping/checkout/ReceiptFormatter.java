@@ -21,4 +21,8 @@ public class ReceiptFormatter {
 	public void endOfReceipt() {
 		printer.feed();
 	}
+
+    public void printDiscount(Product product, String discountName, BigDecimal discountTotal) {
+        printer.print(discountName + " " + product.name() + " = " + discountTotal + "\n");
+    }
 }
