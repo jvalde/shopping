@@ -1,3 +1,6 @@
 .idea/
 Shopping.iml
 build/
+.DS_Store
+fit/.DS_Store
+reports/
